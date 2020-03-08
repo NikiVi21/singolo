@@ -91,7 +91,8 @@ input {
 
 .form-describe {
     width: 619px;
-    height: 200px;
+    height: 35px;
+    padding-bottom: 168px;
 }
 
 .submit {
