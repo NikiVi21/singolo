@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-body, p, main ,footer,h1, h2 {
+body, p, main, footer, h1, h2, a {
     margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Lato', sans-serif;
     cursor: default;
+    background-color: #2d303a;
 }
 
 p {
@@ -19,12 +24,20 @@ p {
     padding: 0px 40px 0px 40px;
 }
 
+.scroll {
+    position: absolute;
+    margin-top: -88px;
+}
+
 header {
     display: flex;
     color: white;
     height: 89px;
     align-items: center;
-    background-color: #2d303a;
+    background-color: #2d303ad0;
+    position: sticky;
+    top: 0;
+    z-index: 5;
 }
 
 .header {
@@ -55,13 +68,17 @@ header {
     letter-spacing: -0.015rem;
 }
 
-.singolo-right > p {
+.singolo-right > a {
     font-size: 0.75rem;
 }
 
-.singolo-right > p:hover{
+.active {
     color: #f06c64;
-    cursor: pointer;
+}
+
+a:not(.active):hover {
+    color: #f06c64;
+    cursor: pointer;    
 }
 
 .dot {
