@@ -11,6 +11,8 @@ const layer_h = document.getElementById('layer-h')
 const layer_v = document.getElementById('layer-v')
 const square_h = document.getElementById('square-h')
 const square_v = document.getElementById('square-v')
+const circle_v = document.getElementById('circle-v')
+const circle_h = document.getElementById('circle-h')
 
 square_h.addEventListener('click', (event) => {
 	if (layer_h.classList.contains('none')) {
@@ -27,5 +29,23 @@ square_v.addEventListener('click', (event) => {
 	}
 	else {
 		layer_v.classList.add('none');
+	}
+});
+
+circle_v.addEventListener('click', (event) => {
+	if (layer_v.classList.contains('none')) {
+		layer_v.classList.remove('none');
+	}
+	else {
+		layer_v.classList.add('none');
+	}
+});
+
+circle_h.addEventListener('click', (event) => {
+	if (layer_h.classList.contains('none')) {
+		layer_h.classList.remove('none');
+	}
+	else {
+		layer_h.classList.add('none');
 	}
 });

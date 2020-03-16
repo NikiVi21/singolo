@@ -112,6 +112,8 @@ a:not(.active):hover {
     display: none;
 }
 
+
+
 .vertical {
     position: relative;
     height: 483px;
@@ -155,11 +157,13 @@ a:not(.active):hover {
 .circle-v {
     z-index: 3;
     margin: 404px 0 0 74px;
+    cursor: pointer;
 }
 
 .square-v {
     z-index: 4;
     margin: 26.04rem 0 0 87px;
+    cursor: pointer;
 }
 
 .layer-v {
@@ -218,11 +222,13 @@ a:not(.active):hover {
 .square-h {
     z-index: 4;
     margin: 5.94rem 0 0 0.9rem;
+    cursor: pointer;
 }
 
 .circle-h {
     z-index: 3;
     margin: 5.124rem 0 0 0.12rem;
+    cursor: pointer;
 }
 
 .layer-h {
