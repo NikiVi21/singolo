@@ -99,8 +99,17 @@ a:not(.active):hover {
     align-items: center;
 }
 
+.slider-blue {
+    display: none;
+}
+
+
 .slider:hover {
     cursor: pointer;
+}
+
+.none {
+    display: none;
 }
 
 .vertical {
@@ -167,6 +176,7 @@ a:not(.active):hover {
     margin: 59px 0 0 0;
     border: 3px solid #c6c6c6;
     border-radius: 4px;
+    background: black;
 }
 
 .slider {
@@ -230,6 +240,7 @@ a:not(.active):hover {
     margin: 8px 0 0 3.2rem;
     border: 3px solid #c6c6c6;
     border-radius: 4px;
+    background: black;
 }
 
 .footer-block-one {
