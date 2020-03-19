@@ -649,6 +649,15 @@ a {
     cursor: pointer;
 }
 
+.border {
+    outline: 5px solid #F06C64 ;
+}
+
+.gallery > img {
+    cursor: pointer;
+}
+
+
 @media (max-width: 960px) {
 
     .contacts {
