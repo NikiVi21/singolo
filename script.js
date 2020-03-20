@@ -84,3 +84,37 @@ portf.addEventListener('click', (event) => {
 		}
 	})
 });
+
+//FORM
+const BUTTON = document.getElementById('submit');
+const closeFORM = document.getElementById('close-message');
+
+BUTTON.addEventListener('click', (event) => {
+	const SUBJ = document.getElementById('subject').value.toString();
+	const DESCRIBE = document.getElementById('describe').value.toString();
+	const NAME = document.getElementById('name').value.toString();
+	const EMAIL = document.getElementById('email').value.toString();
+
+	if (NAME !== '' && EMAIL.includes('@')) {
+		if (SUBJ === '') {
+			document.getElementById('result-subject').innerText = 'Without subject';
+		}
+		else document.getElementById('result-subject').innerText = 'Subject: ' + SUBJ;
+
+		if (DESCRIBE === '') {
+			document.getElementById('result-describe').innerText = 'Without description';
+		}
+		else document.getElementById('result-describe').innerText = 'Description: ' + DESCRIBE;
+
+		document.getElementById('message-block').classList.remove('hidden');
+		event.preventDefault();
+	}
+});
+
+closeFORM.addEventListener('click', (event) => {
+	document.getElementById('result-subject').innerText = '';
+	document.getElementById('result-describe').innerText = '';
+
+	document.getElementById('message-block').classList.add('hidden');
+	document.querySelector('form').reset();
+});

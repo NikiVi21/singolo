@@ -57,8 +57,8 @@
                 </div>
             </div>
             <img class="slider" src="assets/slider/slide-right.svg" alt="right slider">
-            
-        
+
+
             <div class="slider-blue">
                 <img src="assets/Slide-2.png" alt="blue">
             </div>
@@ -254,12 +254,23 @@
             </div>
             <div class="main-form">
                 <form class="form">
-                    <input type="text" class="form-name" name="name" required placeholder="Name (Required)">
-                    <input type="email" class="form-email" name="email" required placeholder="Email (Required)">
-                    <input type="text" class="form-subject" name="subject" placeholder="Subject">
-                    <input type="text" class="form-describe" name="describe"
+                    <input type="text" class="form-name" id="name" name="name" required placeholder="Name (Required)">
+                    <input type="email" class="form-email" id="email" name="email" required
+                        placeholder="Email (Required)">
+                    <input type="text" class="form-subject" id="subject" name="subject" placeholder="Subject">
+                    <input type="text" class="form-describe" id="describe" name="describe"
                         placeholder="Describe your project in detail...">
-                    <button type="submit" class="submit">Submit</button>
+                    <button type="submit" class="submit" id="submit">Submit</button>
+
+                    <div id="message-block" class="hidden">
+                        <div id="message">
+                            <p>The letter was sent</p>
+                            <p id="result-subject"></p>
+                            <p id="result-describe"></p>
+                            <button id="close-message">OK</button>
+                        </div>
+                    </div>
+
                 </form>
                 <div class="contacts">
                     <div class="contact-info">

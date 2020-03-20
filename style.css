@@ -657,6 +657,43 @@ a {
     cursor: pointer;
 }
 
+/* ***** FORM ***** */
+#message-block {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #0008;
+    z-index: 5;
+}
+
+#message-block.hidden {
+    display: none;
+}
+
+#message {
+    position: fixed;
+    top: 30%;
+    left: 25%;
+    right: 25%;
+    max-width: 70%;
+    text-align: center;
+    border: 3px solid #d6564f;
+    border-radius: 5px;
+    background-color: #f06b6479;
+    padding: 15px 15px;
+}
+
+#close-message {
+    margin-top: 10px;
+    width: 30%;
+    height: 40px;
+    background-color: #f06b6479;
+    cursor: pointer;
+    border: 3px solid #d6564f;
+    border-radius: 5px;
+}
 
 @media (max-width: 960px) {
 
