@@ -118,3 +118,54 @@ closeFORM.addEventListener('click', (event) => {
 	document.getElementById('message-block').classList.add('hidden');
 	document.querySelector('form').reset();
 });
+
+//SLIDER
+
+let slider = document.querySelectorAll('.slider');
+let currentSlider = 0;
+let isEnabled = true;
+
+function changeCurrentSlider(n) {
+	currentSlider = (n + slider.length) % slider.length;
+}
+
+function hideSlider(direction) {
+	isEnabled = false;
+	slider[currentSlider].classList.add(direction);
+	slider[currentSlider].addEventListener('animationend', function () {
+		this.classList.remove('active-slider', direction);
+	});
+}
+
+function showSlider(direction) {
+	slider[currentSlider].classList.add('next', direction);
+	slider[currentSlider].addEventListener('animationend', function () {
+		this.classList.remove('next', direction);
+		this.classList.add('active-slider');
+		isEnabled = true;
+	});
+}
+
+function previousSlider(n) {
+	hideSlider('to-left');
+	changeCurrentSlider(n - 1);
+	showSlider('from-right');
+}
+
+function nextSlider(n) {
+	hideSlider('to-right');
+	changeCurrentSlider(n + 1);
+	showSlider('from-left');
+}
+
+document.querySelector('.arrow.left').addEventListener('click', function() {
+	if (isEnabled) {
+		previousSlider(currentSlider);
+	}
+});
+
+document.querySelector('.arrow.right').addEventListener('click', function() {
+	if (isEnabled) {
+		nextSlider(currentSlider);
+	}
+});
