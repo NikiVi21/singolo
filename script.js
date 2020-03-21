@@ -124,6 +124,7 @@ closeFORM.addEventListener('click', (event) => {
 let slider = document.querySelectorAll('.slider');
 let currentSlider = 0;
 let isEnabled = true;
+const BACKGR = document.getElementById('slide-backColor');
 
 function changeCurrentSlider(n) {
 	currentSlider = (n + slider.length) % slider.length;
@@ -161,11 +162,28 @@ function nextSlider(n) {
 document.querySelector('.arrow.left').addEventListener('click', function() {
 	if (isEnabled) {
 		previousSlider(currentSlider);
+		
+		if (slider[currentSlider].classList.contains('slider-blue')) {
+			BACKGR.style.backgroundColor = '#648bf0';
+			BACKGR.style.borderBottomColor = '#395fc0';
+		}
+		else {
+			BACKGR.style.backgroundColor = '#f06c64';
+			BACKGR.style.borderBottomColor = '#ea676b';
+		}
 	}
 });
 
 document.querySelector('.arrow.right').addEventListener('click', function() {
 	if (isEnabled) {
 		nextSlider(currentSlider);
+		if (slider[currentSlider].classList.contains('slider-blue')) {
+			BACKGR.style.backgroundColor = '#648bf0';
+			BACKGR.style.borderBottomColor = '#395fc0';
+		}
+		else {
+			BACKGR.style.backgroundColor = '#f06c64';
+			BACKGR.style.borderBottomColor = '#ea676b';
+		}
 	}
 });
