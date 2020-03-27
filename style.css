@@ -12,6 +12,7 @@ body {
     font-family: 'Lato', sans-serif;
     cursor: default;
     background-color: #2d303a;
+    overflow-x: hidden;
 }
 
 p {
@@ -168,7 +169,6 @@ a:not(.active):hover {
         left: 19%;
     }
 }
-
 
 
 
