@@ -1,5 +1,5 @@
 // HEADER
-const MENU = document.getElementById('menu')
+const MENU = document.getElementById('menu');
 
 MENU.addEventListener('click', (event) => {
 	MENU.querySelectorAll('a').forEach(element => element.classList.remove('active'));
@@ -7,27 +7,24 @@ MENU.addEventListener('click', (event) => {
 });
 
 //HEADER SCROLL
-/*
-document.addEventListener('scroll', onScroll);
 
-function onScroll(event) {
+document.addEventListener('scroll', event => {
 	const cursorPos = window.scrollY;
 	const divs = document.querySelectorAll('.scroll');
-	const links = document.querySelectorAll('a');
+	const links = document.querySelectorAll('#menu a');
 
-
-divs.forEach((elem) => {
-	if (elem.offsetTop <= cursorPos && (elem.offsetTop + elem.offsetHeight) > cursorPos) {
-		links.forEach((a) => {
-			a.classList.remove('active');
-			if (elem.getAttribute('id') === a.getAttribute('href').substring(1)) {
-				a.classList.add('active');
-			}
-		})
-	}
+	divs.forEach(elem => {
+		if (elem.offsetTop - 50 <= cursorPos) {
+			links.forEach(a => {
+				a.classList.remove('active');
+				if (elem.getAttribute('id') === a.getAttribute('href').substring(1)) {
+					a.classList.add('active');
+				}
+			});
+		}
+	});
 });
-}
-*/
+
 
 //SCREEN OFF/ON
 const layer_h = document.getElementById('layer-h')
@@ -159,10 +156,10 @@ function nextSlider(n) {
 	showSlider('from-left');
 }
 
-document.querySelector('.arrow.left').addEventListener('click', function() {
+document.querySelector('.arrow.left').addEventListener('click', function () {
 	if (isEnabled) {
 		previousSlider(currentSlider);
-		
+
 		if (slider[currentSlider].classList.contains('slider-blue')) {
 			BACKGR.style.backgroundColor = '#648bf0';
 			BACKGR.style.borderBottomColor = '#395fc0';
@@ -174,7 +171,7 @@ document.querySelector('.arrow.left').addEventListener('click', function() {
 	}
 });
 
-document.querySelector('.arrow.right').addEventListener('click', function() {
+document.querySelector('.arrow.right').addEventListener('click', function () {
 	if (isEnabled) {
 		nextSlider(currentSlider);
 		if (slider[currentSlider].classList.contains('slider-blue')) {
