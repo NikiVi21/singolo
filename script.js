@@ -14,7 +14,7 @@ document.addEventListener('scroll', event => {
 	const links = document.querySelectorAll('#menu a');
 
 	divs.forEach(elem => {
-		if (elem.offsetTop <= cursorPos) {
+		if (elem.offsetTop - 50 <= cursorPos) {
 			links.forEach(a => {
 				a.classList.remove('active');
 				if (elem.getAttribute('id') === a.getAttribute('href').substring(1)) {
