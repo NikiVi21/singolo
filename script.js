@@ -184,3 +184,17 @@ document.querySelector('.arrow.right').addEventListener('click', function () {
 		}
 	}
 });
+
+//PORTFOLIO CLICK
+const linkPORTFOLIO = document.getElementById('link_portfolio');
+const PIC = document.querySelector('.gallery');
+
+linkPORTFOLIO.addEventListener('click', (event) => {
+
+	if (!event.target.classList.contains("active-portfolio")) {
+		
+	}
+
+	linkPORTFOLIO.querySelectorAll('p').forEach(element => element.classList.remove('active-portfolio'));
+	event.target.classList.add('active-portfolio');
+});
