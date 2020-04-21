@@ -450,6 +450,13 @@ a:not(.active):hover {
     cursor: pointer;
 }
 
+/* ***** Active-portfolio ***** */
+.link > .active-portfolio {
+    color: white;
+    border-color: white;
+}
+
+
 .about-us {
     border-bottom: 6px solid #ffffff;
     background-color: #f2f2f2;
